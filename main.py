@@ -4,19 +4,27 @@ from flask import Flask, request, render_template
 app = Flask(__name__)
 
 
-@app.route('/<name>')
 @app.route('/', methods=['GET', 'POST'])
-def home_page(name=None):
-    if request.method == 'GET':
-        return render_template('findpark.html', name=name)
-    else:
-        return "Welcome to the best park place finder on the web!"
+def home_page():
+    # user_input = request.form['adress']
+    return render_template('findpark.html')
+    # return user_input
 
 
-@app.route('/about')
+@app.route('/about', methods=['GET', 'POST'])
 def about():
-    return "We offer the service to find a parkplace"
+    xxx = request
+    address = request.form['adress']
+    prox = request.form['proximity']
+    return request.form.__str__()
 
+    # return wer
+    # return "We offer the service to find a parkplace"
+
+
+@app.route('/process_data')
+def process_user_input():
+    return "sdfsdf"
 
 if __name__ == "__main__":
     app.run("0.0.0.0", 6565)
