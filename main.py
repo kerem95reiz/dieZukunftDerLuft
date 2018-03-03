@@ -13,13 +13,10 @@ def home_page():
 
 @app.route('/about', methods=['GET', 'POST'])
 def about():
-    xxx = request
-    address = request.form['adress']
+    xxx = request.form
+    address = request.form['address']
     prox = request.form['proximity']
     return request.form.__str__()
-
-    # return wer
-    # return "We offer the service to find a parkplace"
 
 
 @app.route('/process_data')

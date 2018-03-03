@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Findpark</title>
+    <link href="{{ url_for('static', filename='style.css')  }}" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <!--{% if name %}-->
@@ -13,7 +14,7 @@
 <!--Burasi da olayin merkezi-->
 
 <form action="{{ url_for('about') }}" method="post">
-    <input name="adress" type="text">
+    <input name="address" type="text">
     <input name="proximity" type="number" name="The proximity (in km):">
     <input type="submit" value="Submit">
 </form>
