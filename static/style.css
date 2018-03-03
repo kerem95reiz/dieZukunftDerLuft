@@ -1,4 +1,10 @@
 body{
-    background-color: lightblue;
+    background: lightblue url("bg.jpg") no-repeat;
+}
 
+div.relative{
+    position: absolute;
+    line-height: 200%;
+    top: 70%;
+    left: 40%;
 }

@@ -8,7 +8,6 @@ app = Flask(__name__)
 def home_page():
     # user_input = request.form['adress']
     return render_template('findpark.html')
-    # return user_input
 
 
 @app.route('/about', methods=['GET', 'POST'])
